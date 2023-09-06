@@ -322,9 +322,9 @@ state FireChaingun
     {
         super(KFMonster).Tick(Delta);
         if (bChargingPlayer)
-            GroundSpeed = OriginalGroundSpeed * 2.3;
+            GroundSpeed = OriginalGroundSpeed * 4;
         else
-            GroundSpeed = OriginalGroundSpeed * 1.15;
+            GroundSpeed = OriginalGroundSpeed * 2;
     }
 
     function AnimEnd(int Channel)
@@ -838,12 +838,12 @@ defaultproperties
     sndTauntLumberJack=SoundGroup'KF_EnemiesFinalSnd.Patriarch.Kev_TauntLumberJack'
     sndTauntRadial=SoundGroup'KF_EnemiesFinalSnd.Patriarch.Kev_TauntRadial'
 
-    PatStates(0)=(bMovCG=false,bRunCG=false,bPauseCG=true,bMisIgnoreRange=false,bAltRoute=false,NumMis[0]=1,NumMis[1]=0,NumCG[0]=35,NumCG[1]=5,MisRepTime=1.000000)
-    PatStates(1)=(bMovCG=false,bRunCG=false,bPauseCG=false,bMisIgnoreRange=false,bAltRoute=false,NumMis[0]=2,NumMis[1]=0,NumCG[0]=45,NumCG[1]=10,MisRepTime=0.800000)
-    PatStates(2)=(bMovCG=true,bRunCG=false,bPauseCG=false,bMisIgnoreRange=true,bAltRoute=true,NumMis[0]=3,NumMis[1]=0,NumCG[0]=55,NumCG[1]=15,MisRepTime=0.700000)
-    PatStates(3)=(bMovCG=true,bRunCG=true,bPauseCG=false,bMisIgnoreRange=true,bAltRoute=true,NumMis[0]=4,NumMis[1]=0,NumCG[0]=65,NumCG[1]=15,MisRepTime=0.500000)
+    PatStates(0)=(bMovCG=false,bRunCG=false,bPauseCG=true,bMisIgnoreRange=false,bAltRoute=false,NumMis[0]=2,NumMis[1]=3,NumCG[0]=35,NumCG[1]=5,MisRepTime=0.400000)
+    PatStates(1)=(bMovCG=true,bRunCG=true,bPauseCG=false,bMisIgnoreRange=true,bAltRoute=false,NumMis[0]=3,NumMis[1]=4,NumCG[0]=45,NumCG[1]=10,MisRepTime=0.300000)
+    PatStates(2)=(bMovCG=true,bRunCG=true,bPauseCG=false,bMisIgnoreRange=true,bAltRoute=true,NumMis[0]=4,NumMis[1]=5,NumCG[0]=55,NumCG[1]=15,MisRepTime=0.200000)
+    PatStates(3)=(bMovCG=true,bRunCG=true,bPauseCG=false,bMisIgnoreRange=true,bAltRoute=true,NumMis[0]=5,NumMis[1]=6,NumCG[0]=65,NumCG[1]=15,MisRepTime=0.100000)
 
-    PatHealth=4000
+    PatHealth=25000
 
     ClawMeleeDamageRange=75 //85
     ImpaleMeleeDamageRange=85 //45
@@ -852,7 +852,7 @@ defaultproperties
     ZapResistanceScale=2.0
     ZappedSpeedMod=0.8
 
-    bCanDistanceAttackDoors=false
+    bCanDistanceAttackDoors=true
 
     LODBias=4.000000
 
