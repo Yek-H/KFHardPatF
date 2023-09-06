@@ -322,9 +322,9 @@ state FireChaingun
     {
         super(KFMonster).Tick(Delta);
         if (bChargingPlayer)
-            GroundSpeed = OriginalGroundSpeed * 4;
+            GroundSpeed = OriginalGroundSpeed * 5,75;
         else
-            GroundSpeed = OriginalGroundSpeed * 2;
+            GroundSpeed = OriginalGroundSpeed * 2,88;
     }
 
     function AnimEnd(int Channel)
